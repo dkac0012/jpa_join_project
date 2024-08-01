@@ -19,7 +19,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
 
 @SequenceGenerator(name = "emp_seq", sequenceName = "emp_seq_id", 
 				   allocationSize = 50, initialValue = 1)
