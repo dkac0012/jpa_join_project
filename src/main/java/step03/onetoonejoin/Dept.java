@@ -21,7 +21,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
 
 @Entity
 public class Dept {
