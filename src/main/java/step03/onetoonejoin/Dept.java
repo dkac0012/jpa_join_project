@@ -21,7 +21,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @Setter
-
 @Entity
 public class Dept {
 
@@ -35,8 +34,7 @@ public class Dept {
 	@Column(name = "loc", length = 20)
 	private String loc;
 
-	// join을 위해서 entity에만 구현하는 변수
-	@OneToMany(mappedBy = "deptno") // Member4에서 Team에 조인된 변수명 매핑, 자식의 참조키
-	public List<Dept> members = new ArrayList<>();
+	@OneToMany(mappedBy = "deptno") 
+	public List<Emp> dept = new ArrayList<>();
 
 }
