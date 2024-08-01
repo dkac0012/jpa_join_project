@@ -30,7 +30,7 @@ public class Emp {
 	@Column(name="empno", nullable = false )
 	private long empno;
 	
-	@Column(name = "ename",length = 20) //컬럼 사이즈 20byte
+	@Column(name = "ename",length = 20) 
 	private String ename;
 	
 	@Column(name = "job",length = 20)
@@ -40,7 +40,6 @@ public class Emp {
 	private long mgr;
 	
 	@Column(name = "hiredate")
-//	@Temporal(TemporalType.DATE)
 	private String hiredate;
 	
 	@Column(name = "sal")
@@ -51,7 +50,7 @@ public class Emp {
 	
     
 	@ManyToOne
-	@JoinColumn(name="deptno")  //Team3의 pk 변수에 선언된 매핑된 컬럼명
+	@JoinColumn(name="deptno") 
 	private Dept deptno;
 	
 }
