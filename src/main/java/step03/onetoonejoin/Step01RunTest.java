@@ -19,13 +19,10 @@ public class Step01RunTest {
 			tx = em.getTransaction();
 			tx.begin();
 
-//			List<Emp> datas = em.createNativeQuery("select * from Emp", Emp.class).getResultList();
-
-			Emp t1 = new Emp(634, "fisa", "MANAGER", 1, "1981-11-17", 6000, 1, 30);
-			em.persist(t1);
+			List<Emp> datas = em.createNativeQuery("select * from Emp", Emp.class).getResultList();
 
 			tx.commit();
-//			System.out.println("정상출력" + datas);
+			System.out.println("정상출력" + datas);
 
 		} catch (Exception e) {
 			tx.rollback();
